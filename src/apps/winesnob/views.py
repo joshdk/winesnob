@@ -52,8 +52,6 @@ def fetch_results(query):
 	# Fetch wine results
 	fres = freq.param('length', 3).query(query + ' wine')
 	if fres is not None and fres.results is not None:
-		for result in fres.results:
-			result.title += ' [wine]'
 		results = fres.results + results
 
 	# Augment results with suggestions
