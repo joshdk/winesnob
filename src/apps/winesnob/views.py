@@ -45,12 +45,12 @@ def fetch_results(query):
 	results = []
 
 	# Fetch regular results
-	fres = freq.param('length', 8).query(query)
+	fres = freq.param('length', 25).query(query)
 	if fres is not None and fres.results is not None:
 		results = fres.results + results
 
 	# Fetch wine results
-	fres = freq.param('length', 3).query(query + ' wine')
+	fres = freq.param('length', 7).query(query + ' wine')
 	if fres is not None and fres.results is not None:
 		results = fres.results + results
 
